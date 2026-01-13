@@ -1,0 +1,3 @@
+[submodule "zig-webui"]
+	path = zig-webui
+	url = git@github.com:webui-dev/zig-webui.git
