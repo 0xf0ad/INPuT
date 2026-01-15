@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="/webui.js"></script>
+	<title>Assembly IDE</title>
+	<link rel="stylesheet" href="codemirror/codemirror.css">
+	<link rel="stylesheet" href="codemirror/material-darker.css">
+	<link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+<div class="toolbar">
+	<button class="btn" onclick="run()">Run</button>
+	<button class="btn" onclick="reset()">Reset</button>
+	<div style="flex:1"></div>
+	<span id="cursorPos">Ln 1, Col 1</span>
+</div>
+
+<div class="tabs">
+	<div class="tab active">tp.s</div>
+</div>
+
+<div class="main">
+	<div class="editor-container">
+		<div class="line-numbers" id="lineNumbers"></div>
+		<textarea class="editor" id="editor" spellcheck="false"></textarea>
+	</div>
+	
+	<div class="sidebar">
+		<div class="sidebar-tabs">
+			<div class="sidebar-tab active">Registers</div>
+			<div class="sidebar-tab">Memory</div>
+			<div class="sidebar-tab">Symbols</div>
+		</div>
+		<div class="sidebar-content" id="registers"></div>
+	</div>
+</div>
+
+<div class="status-bar">
+	<div class="status-item">N <span>0</span></div>
+	<div class="status-item">Z <span>0</span></div>
+	<div class="status-item">C <span>0</span></div>
+	<div class="status-item">V <span>0</span></div>
+</div>
+<script src="codemirror/codemirror.js"></script>
+<script src="codemirror/gas.js"></script>
+<script src="src/scrpt.js"></script>
+</body>
+</html>
